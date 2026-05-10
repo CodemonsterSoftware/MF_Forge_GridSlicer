@@ -6,11 +6,16 @@
     "description": "Slice models into printable parts with joinery.",
     "icon": "bi-scissors",
     "backend": "python",
-    "template": "forge/slice.html",
+    "template": "GridSlicer/ui.html",
     "main": "main.py",
     "enabled": true,
     "download": "https://github.com/CodemonsterSoftware/MF_Forge_GridSlicer/archive/refs/tags/v1.0.0.zip",
     "dependencies": {
-        "pip": ["trimesh", "numpy-stl"]
-    }
+        "pip": ["trimesh", "numpy-stl"],
+        "services": ["blender"]
+    },
+    "quick_actions": [
+        { "id": "slice_uniform", "name": "Uniform Slice", "icon": "bi-grid-3x3" },
+        { "id": "slice_fit", "name": "Fit to Printer", "icon": "bi-printer" }
+    ]
 }
